@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:title="@string/app_name" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:id="@+id/ot_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/mainframe"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:foreground="@drawable/shape_window_dim"
+            android:orientation="horizontal">
+
+
+            <RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                tools:context="com.infonetworks.www.app.activity.OtItemFragment">
+
+                <!--edittext에 focus가 가는것을 자동으로 막기 위해서  ll에 focus를 받게 수정함-->
+                <!-- http://theeye.pe.kr/archives/1423 -->
+
+
+                <LinearLayout
+                    android:id="@+id/ll_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_header"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bigtitletext_bg"
+                        android:gravity="center_horizontal"
+                        android:padding="4dp"
+                        android:text="[아파트-매매]"
+                        android:textColor="#ff3300" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/item_margin_top"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/titleText"
+                            android:text="@string/txt_rnum" />
+
+                        <TextView
+                            android:id="@+id/tv_rnum"
+                            style="@style/dataText"
+                            android:text="111112222333333334444"
+
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/item_margin_top"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/titleText"
+                            android:text="@string/txt_regdate" />
+
+                        <TextView
+                            android:id="@+id/tv_regdate"
+                            style="@style/dataText"
+                            android:text="2001-01-01 00:00:00" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/item_margin_top"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/titleText"
+                            android:text="@string/txt_title" />
+
+                        <TextView
+                            android:id="@+id/tv_title"
+                            style="@style/dataText"
+                            android:text="제목 입니다" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/item_margin_top"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/titleText"
+                            android:text="@string/txt_content" />
+
+                        <TextView
+                            android:id="@+id/tv_content"
+                            style="@style/dataText"
+                            android:maxLines="5"
+                            android:scrollbars="vertical"
+                            android:singleLine="false"
+                            android:text="내용 입니다" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/item_margin_top"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/titleText"
+                            android:text="@string/txt_region" />
+
+                        <TextView
+                            android:id="@+id/tv_region"
+                            style="@style/dataText"
+                            android:text="region" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/item_margin_top"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/titleText"
+                            android:text="@string/txt_area"
+
+                            />
+
+                        <TextView
+                            android:id="@+id/tv_area"
+                            style="@style/dataText"
+                            android:text="000~100평" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/item_margin_top"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/titleText"
+                            android:text="@string/txt_floor" />
+
+                        <TextView
+                            android:id="@+id/tv_floor"
+                            style="@style/dataText"
+                            android:text="01~10층" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/item_margin_top"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/titleText"
+                            android:text="@string/txt_room" />
+
+                        <TextView
+                            android:id="@+id/tv_room"
+                            style="@style/dataText"
+                            android:text="1~3개" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/item_margin_top"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/titleText"
+                            android:text="@string/txt_sprice" />
+
+                        <TextView
+                            android:id="@+id/tv_sprice"
+                            style="@style/dataText"
+                            android:text="100,000~200,000" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/item_margin_top"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/titleText"
+                            android:text="@string/txt_dprice" />
+
+                        <TextView
+                            android:id="@+id/tv_dprice"
+                            style="@style/dataText"
+                            android:text="100,000~200,000" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/item_margin_top"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/titleText"
+                            android:text="@string/txt_rprice" />
+
+                        <TextView
+                            android:id="@+id/tv_rprice"
+                            style="@style/dataText"
+                            android:text="100,000~200,000" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_company"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ll_header"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/item_margin_top"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/companytitleText"
+                            android:text="@string/txt_company" />
+
+                        <TextView
+                            android:id="@+id/tv_company"
+                            style="@style/dataText"
+                            android:text="가나다 부동산/경기도 용인시 기흥구 " />
+
+                        <TextView
+                            android:id="@+id/tv_regccode"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="M0013"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/tv_regcname"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="가나다 부동산"
+                            android:visibility="gone" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/item_margin_top"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/companytitleText"
+                            android:text="@string/txt_person" />
+
+                        <TextView
+                            android:id="@+id/tv_person"
+                            style="@style/dataText"
+                            android:text="홍길동 사무장" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/item_margin_top"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/companytitleText"
+                            android:text="@string/txt_tel" />
+
+                        <TextView
+                            android:id="@+id/tv_tel"
+                            style="@style/dataText"
+                            android:text="010-1111-11111" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/item_margin_top"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/companytitleText"
+                            android:text="@string/txt_mobile" />
+
+                        <TextView
+                            android:id="@+id/tv_mobile"
+                            style="@style/dataText"
+                            android:text="010-1111-1111" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ll_company"
+                    android:layout_marginTop="2dp"
+                    android:orientation="vertical">
+
+                    <ListView
+                        android:id="@+id/lv_responselist"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#d2c74f" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_response"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ll_list"
+                    android:layout_marginTop="2dp"
+                    android:orientation="vertical">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:touchscreenBlocksFocus="false">
+
+                        <EditText
+                            android:id="@+id/replyContent"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:ems="500"
+                            android:gravity="top"
+                            android:hint="@string/hint_reply_content"
+                            android:inputType="textMultiLine"
+                            android:lines="3"
+                            android:maxLength="1000" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/replyBtn"
+                            style="@style/replyBtnText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"
+                            android:background="@drawable/loginbtn_bg"
+                            android:text="@string/btn_reply" />
+
+                        <Space
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                        <Button
+                            android:id="@+id/closeBtn"
+                            style="@style/replyBtnText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"
+                            android:background="@drawable/loginbtn_bg"
+                            android:text="@string/btn_close" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+        </FrameLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,20 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/activity_vertical_margin"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_reginfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="[000] 2011-01-01 11:00:11 - 홍길동" />
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="방문토록 하겠습니다" />
+
+
+</LinearLayout>

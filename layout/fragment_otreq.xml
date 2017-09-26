@@ -1,0 +1,40 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/otlistView_Time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="조회시간 : 2001년1월1일 00시00분00초" />
+
+        <TextView
+            android:id="@+id/otlistView_Cnt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="000건" />
+
+    </LinearLayout>
+
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/otlistView"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:fadingEdge="none"
+        android:fastScrollEnabled="false"
+        android:footerDividersEnabled="false"
+        android:headerDividersEnabled="false"
+        android:smoothScrollbar="true"
+        />
+
+</LinearLayout>

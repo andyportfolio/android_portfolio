@@ -1,0 +1,155 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/request_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/request_title"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/sp_type"
+            style="@style/spinnerBorder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"/>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:gravity="center"
+            android:touchscreenBlocksFocus="false">
+
+            <EditText
+                android:id="@+id/typeText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_type"
+                android:visibility="gone" />
+        </android.support.design.widget.TextInputLayout>
+
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="5dp" />
+
+        <Spinner
+            android:id="@+id/sp_category"
+            style="@style/spinnerBorder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"/>
+
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:gravity="center"
+            android:touchscreenBlocksFocus="false">
+
+            <EditText
+                android:id="@+id/reqTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#d5eab7"
+                android:hint="@string/hint_title"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:lines="1"
+                android:maxLength="100" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:gravity="center"
+            android:touchscreenBlocksFocus="false">
+
+            <EditText
+                android:id="@+id/reqContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#d5eab7"
+                android:ems="10"
+                android:gravity="top"
+                android:hint="@string/hint_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:inputType="textMultiLine"
+                android:lines="5"
+                android:maxLength="1000" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/body"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/requestBtn"
+                style="@style/LoginBtnText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:background="@drawable/loginbtn_bg"
+                android:text="@string/btn_reqeust" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/resetBtn"
+                style="@style/LoginBtnText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:background="@drawable/loginbtn_bg"
+                android:text="@string/btn_reset" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@android:drawable/ic_dialog_info" />
+
+</android.support.design.widget.CoordinatorLayout>
+
+<!--<Spinner-->
+<!--android:id="@+id/sp_type"-->
+<!--style="@style/spinnerBorder"-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="wrap_content"-->
+<!--android:layout_margin="2dp"-->
+    <!--android:entries="@array/spinnerArray1"-->
+    <!--android:focusable="true"-->
+    <!--android:focusableInTouchMode="true"-->
+    <!--android:textAppearance="?android:attr/textAppearanceMedium" />-->

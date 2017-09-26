@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/nav_header_height"
+    android:background="@drawable/side_nav_bar"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+
+    <ImageButton
+        android:id="@+id/user_profile_photo"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/header_cover_image"
+        android:layout_centerHorizontal="true"
+        android:adjustViewBounds="true"
+        android:background="@drawable/profile_circular_border_imageview"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_account_circle_black_24dp" />
+
+
+    <TextView
+        android:id="@+id/tv_userinfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/nav_header_vertical_spacing"
+        android:text="InfoNetworks"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+    <TextView
+        android:id="@+id/tv_telinfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Infonetwork@daum.com" />
+
+</LinearLayout>
+
+    <!--<ImageView--><!--android:id="@+id/imageView"--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:paddingTop="@dimen/nav_header_vertical_spacing"--><!--android:src="@android:drawable/sym_def_app_icon" />-->
+
+    <!--android:src="@drawable/ic_account_circle_black_24dp"-->
+
+    <!--차이가 무엇일가--><!--<ImageButton--><!--android:id="@+id/user_profile_photo"--><!--android:layout_width="60dp"--><!--android:layout_height="60dp"--><!--android:layout_below="@+id/header_cover_image"--><!--android:layout_centerHorizontal="true"--><!--android:layout_marginTop="-40dp"--><!--android:background="@drawable/profile_circular_border_imageview"--><!--android:elevation="5dp"--><!--android:padding="20dp"--><!--android:scaleType="centerCrop"--><!--android:adjustViewBounds="true" />-->

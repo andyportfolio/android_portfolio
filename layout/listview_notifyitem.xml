@@ -1,0 +1,91 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:keepScreenOn="true" >
+
+    <ImageView
+        android:id="@+id/notify_image"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_weight="1"
+        android:src = "@drawable/ic_send_white_24dp"
+        android:layout_alignParentLeft = "true"/>
+
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_toRightOf="@id/notify_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:weightSum="100">
+
+        <TextView
+            android:id="@+id/rnum"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="20"
+            android:gravity="left"
+            android:text="[1234]" />
+
+        <TextView
+            android:id="@+id/refer_rnum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/origin_rnum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/req_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/reqtype_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="20"
+            android:text="매수" />
+
+
+        <TextView
+            android:id="@+id/reg_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="25"
+            android:text="09:47:53" />
+
+        <TextView
+            android:id="@+id/reg_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="35"
+            android:gravity="right"
+            android:text="가나다 부동산" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_below="@id/ll"
+        android:layout_alignLeft="@id/ll"
+        android:layout_alignBottom="@id/notify_image"
+        android:id="@+id/display_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="주상복합-전세 AAAA 구합니다" />
+
+</RelativeLayout>
